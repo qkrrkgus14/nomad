@@ -1,0 +1,38 @@
+﻿html{width: 100%; height: 100%;}
+body{width: 100%; height: 100%;}
+
+#wrap{width: 100%; height: 100%; font-size: 1.1em;}
+
+.headerWrap{position: fixed; top: 0; z-index: 1; width: 100%; height: 9%; background: #30b99d;}
+.header{position: relative; left: 50%; margin-left: -45%; width: 90%; height: 100%;}
+.header p a{font-size: 1.2em;}
+.header p.back{position: absolute; left: 0; top: 50%; margin-top: -17px; width: 34px;}
+.header p.back a img{width: 100%;}
+.header p.title{position: absolute; top: 50%; margin-top: -15px; left: 50%; margin-left: -63px; font-size: 1.6em; font-weight: 700; color: #ffffff;}
+.header p.more{position: absolute; top: 50%; right: 0; margin-top: -14px; width: 30px;}
+.header p.more a img{width: 100%;}
+
+.contents{position: relative; top: 9%; width: 100%; height: auto; padding-bottom: 60px;}
+.contents p.date{padding: 10px; text-align: center; font-size: 13px; color: #656565;}
+
+.contents p.left{position: relative; padding: 10px 36% 10px 4%; width: 60%; height: auto;}
+.contents p.left > img{position: absolute; width: 40px; border-radius: 50%;}
+.contents p.left span.talk{position: relative; left: 50px; padding: 5px; display: block; background: #eaeaea; border-radius: 4px; color: #323232; margin-right: 0;}
+.contents p.left span.talk > img{width: 100%;}
+.contents p.left span.time{position: absolute; bottom: 0; right: -34px; font-size: 10px; color: #b7b7b7;}
+
+.contents p.right{position: relative; padding: 10px 4% 10px 36%; width: 60%; height: auto;}
+.contents p.right span.talk{position: relative; right: 4%; padding: 5px; display: block; background: #31b89c; border-radius: 4px; color: #ffffff; margin-right: 0; text-align: right;}
+.contents p.right span.talk > img{width: 100%;}
+.contents p.right span.time{position: absolute; bottom: 0; left: -34px; font-size: 10px; color: #b7b7b7;}
+
+.contents p.left.photo span.download{position: absolute; bottom: 20px; right: -26px; display: block; width: 18px;}
+.contents p.left.photo span.download img{width: 100%;}
+
+.contents p.right.photo span.download{position: absolute; bottom: 20px; left: -26px; display: block; width: 18px;}
+.contents p.right.photo span.download img{width: 100%;}
+
+.chat{position: fixed; bottom: 0; left: 0; width: 100%; height: 50px; background: #ffffff; border-top: 1px solid #d9d9d9;}
+.chat button{float: left; height: 22px; margin-left: 4%; margin-top: 14px;}
+.chat button img{height: 100%;}
+.chat input[type="text"]{float: right; width: 64%; height: 32px; border: 1px solid #d9d9d9; border-radius: 12px; margin-top: 8px; margin-right: 4%; background: #f7f7f7; padding-left: 10px; font-size: 14px;}

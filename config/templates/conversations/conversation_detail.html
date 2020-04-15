@@ -1,0 +1,63 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#56c3ac" />
+	<title>Animal Go</title>
+	<link rel="stylesheet" href="{% static 'css/reset.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/notice_message_detail_style.css' %}" />
+</head>
+<body>
+	<div id="wrap">
+		<div class="headerWrap">
+			<div class="header">
+                {% comment %}
+				<p class="back"><a href=""><img src="images/btn_back.png" alt="" /></a></p>
+				{% endcomment %}
+                <p class="back"><a href=""><img src="{{ the_other_user.avatar.url }}" alt="" /></a></p>
+
+				<p class="title">대화방</p>
+				<p class="more"><a href="javascript:;"><img src="images/btn_more.png" alt="" /></a></p>
+			</div><!-- class="header" -->
+		</div><!-- class="headerWrap" -->
+
+		<div class="contents">
+            <div>
+                {% for message in conversations %}
+                {% comment %}{% for message in conversation.messages.all %}{% endcomment %}
+                    {% if message.user.pk == user.pk %}
+                        <p class="right">
+                    {% else %}
+                        <p class="left">
+                            <img src="{{ message.user.avatar.url }}" alt="" />
+                    {% endif %}
+                            <span class="talk">{{ message.message }}<span class="time">{{ message.created }}</span></span>
+                        </p>
+                {% endfor %}
+            </div>
+
+            <div>
+                <h5>
+                    {% for page in page_range %}
+                        <a href="?page={{ page }}">{{ page }}</a>
+                    {% endfor %}
+                </h5>
+
+            </div>
+
+		</div><!-- class="contents" -->
+	</div><!-- id="wrap" -->
+
+	<div class="chat">
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="message" required id="id_message" placeholder="Add a Comment"/>
+        </form>
+	</div>
+</body>
+</html>

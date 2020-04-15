@@ -1,0 +1,4 @@
+Pillow
+django-countries
+django_seed
+mysqlclient==1.3.12
